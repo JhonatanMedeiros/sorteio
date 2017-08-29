@@ -13,10 +13,15 @@
   <button *ngIf="sorteados.length <=2" class="btn btn-success-deduca" type="button" (click)="randomNames()">Sortear</button>
 
 
-  <div *ngIf="listSorteados">
+  <div class="pyro" style="position: fixed; width: 100%; height: 100%" *ngIf="sorteados.length >=3">
+    <div class="before"></div>
+    <div class="after"></div>
+  </div>
+
+  <div *ngIf="listSorteados" style="padding-top: 20px">
 
     <h1>Parabéns aos Sorteados:</h1>
-    <div *ngFor="let name of sorteados" style="font-size: 30px">
+    <div *ngFor="let name of sorteados" style="font-size: 30px; padding-bottom: 15px">
       <span>{{name}}</span>
     </div>
 
@@ -25,8 +30,4 @@
 
 </div>
 
-<div class="pyro" style="position: absolute; width: 100%; height: 100%" *ngIf="sorteados.length >=3">
-  <div class="before"></div>
-  <div class="after"></div>
-</div>
 

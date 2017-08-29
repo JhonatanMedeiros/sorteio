@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
       valor = this.index;
 
       this.nome = this.lista[this.index];
-    }), 100);
+    }), 40);
 
 
 
